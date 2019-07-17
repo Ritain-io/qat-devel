@@ -1,0 +1,46 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Ruby template
+*.gem
+*.rbc
+/.config
+/InstalledFiles
+/pkg/
+/spec/reports/
+/test/tmp/
+/test/version_tmp/
+/test/public/
+/tmp/
+/test/resources/*/tmp/
+
+## Specific to RubyMotion:
+.dat*
+.repl_history
+build/
+
+## Specific to Rubymine/InteliJ
+.idea
+
+## Documentation cache and generated files:
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+/test/coverage/
+/test/resources/*/coverage/
+
+## Environment normalisation:
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
+# for a library or gem, you might want to ignore these files since the code is
+# intended to run in multiple environments; otherwise, check them in:
+Gemfile.lock
+# .ruby-version
+# .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+
+## QAT
+/test/config/cucumber.yml

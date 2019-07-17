@@ -1,0 +1,8 @@
+## <%= @project %> <%= @version %>
+
+**Milestone** %"<%= @version %>"
+
+### Issues solved in this release
+<%- @issues.each do |issue| -%>
+- ~<%= issue[:tag] %> #<%= issue[:id] %> <%= issue[:title] %>
+<%- end -%>
