@@ -28,7 +28,7 @@ jobs:
     - stage: test
       name: "unit tests"
       script: bundle exec rake qat:devel:tests:run
-      if: branch != master AND branch != develop AND tag IS blank
+      if: tag IS blank
     ############
     ### build ##
     ############
