@@ -1,9 +1,8 @@
 #encoding: utf-8
-# require File.expand_path(File.join(File.dirname(__FILE__), 'lib', 'qat', 'version.rb'))
 
 Gem::Specification.new do |gem|
   gem.name        = 'qat-devel'
-  gem.version     = '2.3.0'
+  gem.version     = '6.0.0'
   gem.summary     = %q{Support gem for QAT development.}
   gem.description = <<-DESC
   QAT Devel is a tool for executing common tasks in the development of QAT modules:

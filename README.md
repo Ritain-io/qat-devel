@@ -1,4 +1,6 @@
-# Qat::Devel
+[![Build Status](https://travis-ci.org/readiness-it/qat-devel.svg?branch=master)](https://travis-ci.org/readiness-it/qat-devel)
+
+# QAT::Devel
 
 - Welcome to the Qat devel gem!
 - This gem provides interaction with Gitlab api and DoD metrics.
@@ -103,7 +105,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/qa-toolkit/qat-devel. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/readiness-it/qat-devel. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Code of Conduct
 
