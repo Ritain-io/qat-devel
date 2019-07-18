@@ -2,7 +2,7 @@
 
 # QAT::Devel
 
-- Welcome to the Qat devel gem!
+- Welcome to the QAT Devel gem!
 - This gem provides interaction with Gitlab api and DoD metrics.
 
 ## Table of contents 
