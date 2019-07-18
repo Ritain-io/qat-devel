@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.host.com/api/v4/projects/549/repository/tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - gitlab_token
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 12 Jul 2019 13:02:10 GMT
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      Link:
+      - <https://gitlab.host.com/api/v4/projects/549/repository/tags?id=549&order_by=updated&page=1&per_page=20&sort=desc>;
+        rel="first", <https://gitlab.host.com/api/v4/projects/549/repository/tags?id=549&order_by=updated&page=1&per_page=20&sort=desc>;
+        rel="last"
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Next-Page:
+      - ''
+      X-Page:
+      - '1'
+      X-Per-Page:
+      - '20'
+      X-Prev-Page:
+      - ''
+      X-Request-Id:
+      - ZIN8XBMqxA4
+      X-Runtime:
+      - '0.037372'
+      X-Total:
+      - '0'
+      X-Total-Pages:
+      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Fri, 12 Jul 2019 13:02:10 GMT
+recorded_with: VCR 5.0.0

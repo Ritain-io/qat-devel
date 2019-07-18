@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gitlab.host.com/api/v4/projects/331/repository/tags
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Private-Token:
+      - gitlab_token
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Date:
+      - Fri, 12 Jul 2019 13:01:50 GMT
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '27'
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Request-Id:
+      - HZuITb5R4q6
+      X-Runtime:
+      - '0.028846'
+    body:
+      encoding: UTF-8
+      string: '{"message":"403 Forbidden"}'
+    http_version: 
+  recorded_at: Fri, 12 Jul 2019 13:01:50 GMT
+recorded_with: VCR 5.0.0

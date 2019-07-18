@@ -1,0 +1,33 @@
+require 'cucumber'
+require 'cucumber/rake/task'
+require 'rake/testtask'
+require 'qat/devel/tasks/gitlab'
+
+task :vcr do
+  puts "USING VCR CASSETTE '#{ENV['VCR_CASSETTE_NAME']}'"
+
+  require 'vcr'
+  VCR.configure do |config|
+    config.cassette_library_dir = "fixtures/cassettes"
+    config.debug_logger = File.open('vcr_debug.log', File::CREAT | File::TRUNC | File::RDWR)
+    config.hook_into :webmock
+    # config.default_cassette_options = {allow_unused_http_interactions: false, decode_compressed_response: true, record: :none}
+    config.default_cassette_options = {decode_compressed_response: true, record: :new_episodes}
+  end
+
+  VCR.eject_cassette&.tap do |cassette|
+    @cassete_name = cassette.name
+    puts "CLOSED VCR CASSETTE '#{cassette.name}' -> #{cassette.file}"
+  end
+  VCR.insert_cassette(ENV['VCR_CASSETTE_NAME']).tap{|i| STDOUT.puts i.file}
+
+  at_exit do
+    VCR.eject_cassette&.tap do |cassette|
+      puts "CLOSED VCR CASSETTE '#{cassette.name}' -> #{cassette.file}"
+    end
+  end
+end
+
+Rake::Task['qat:devel:gitlab:milestone_issues_closed'].prerequisites.unshift :vcr
+Rake::Task['qat:devel:gitlab:milestone_release_note'].prerequisites.unshift :vcr
+Rake::Task['qat:devel:gitlab:milestone_tag'].prerequisites.unshift :vcr

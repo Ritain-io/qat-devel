@@ -1,0 +1,1 @@
+require 'qat/devel/tasks/code_documentation'

@@ -1,0 +1,2 @@
+require 'qat/devel/tasks/code_documentation'
+require 'qat/devel/tasks/tests'
