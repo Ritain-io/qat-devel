@@ -28,7 +28,6 @@ jobs:
     - stage: test
       name: "unit tests"
       script: bundle exec rake qat:devel:tests:run
-      if: tag IS blank
     ############
     ### build ##
     ############
@@ -46,7 +45,6 @@ jobs:
         api_key: $RUBYGEMS_API_KEY
         gemspec: *.gemspec
       if: branch = master AND tag IS present
-
 
 stages:
   - validation
