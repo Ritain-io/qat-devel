@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.homepage = 'https://github.com/readiness-it/qat-devel'
 
   gem.authors = ['QAT']
-  gem.license = 'GPL-3'
+  gem.license = 'GPL-3.0'
 
   extra_files = %w[LICENSE]
   gem.files   = Dir.glob('{lib}/**/*') + extra_files
