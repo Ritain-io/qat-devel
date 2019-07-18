@@ -21,14 +21,14 @@ jobs:
     - name: "build gem"
       script: gem build *.gemspec
 
-#    - stage: release
-#      name: "gem release"
-#      script: echo "Deploying to rubygems.org ..."
-#      deploy:
-#        provider: rubygems
-#        api_key: $RUBYGEMS_API_KEY
-#        gemspec: *.gemspec
-#      if: branch = master AND tag IS present
+    - stage: release
+      name: "gem release"
+      script: echo "Deploying to rubygems.org ..."
+      deploy:
+        provider: rubygems
+        api_key: $RUBYGEMS_API_KEY
+        gemspec: *.gemspec
+      if: branch = master AND tag IS present
 
 stages:
   - test
