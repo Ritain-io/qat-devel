@@ -41,7 +41,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'nokogiri', '~> 1.7'
   gem.add_dependency 'nexus', '~> 1.3'
   gem.add_dependency 'gitlab', '~> 4.1.0'
-  gem.add_dependency 'travis'
 
   # Development dependencies
   gem.add_development_dependency 'vcr', '~> 5.0', '>= 5.0.0'
