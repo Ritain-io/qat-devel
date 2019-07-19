@@ -37,4 +37,6 @@ jobs:
         provider: rubygems
         api_key: $RUBYGEMS_API_KEY
         gemspec: qat-devel.gemspec
+        on:
+          tags: true
       if: tag IS present
