@@ -3,6 +3,10 @@ language: ruby
 rvm:
   - 2.5
 
+stages:
+  - test
+  - release
+
 jobs:
   include:
     - stage: test
@@ -27,9 +31,5 @@ jobs:
       deploy:
         provider: rubygems
         api_key: $RUBYGEMS_API_KEY
-        gemspec: *.gemspec
+        gemspec: qat-devel.gemspec
       if: branch = master AND tag IS present
-
-stages:
-  - test
-  - release
