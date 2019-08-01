@@ -58,7 +58,7 @@ require 'qat/devel/tasks'
 ##Get all gitlab milestone issues:
 In order to get all milestone issues in gitlab it is necessary to initialize the client and then call the associated method:
 ```ruby
-gitlab_client = QAT::Devel::GitLab::Client.new(gitlab_token, project_id)
+gitlab_client = QAT::Devel::GitLab::Client.new(gitlab_endpoint, gitlab_token, project_id)
 gitlab_client.get_milestone_id(milestone_title)
 ```
 
