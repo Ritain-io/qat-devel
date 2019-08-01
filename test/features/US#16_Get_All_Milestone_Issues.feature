@@ -5,9 +5,10 @@ Feature: US#16 Run Get All Milestone Issues
 
   Background:
     Given environment variables:
-      | variable      | value        |
-      | CI_PROJECT_ID | 255          |
-      | GITLAB_TOKEN  | gitlab_token |
+      | variable        | value                          |
+      | CI_PROJECT_ID   | 255                            |
+      | GITLAB_TOKEN    | gitlab_token                   |
+      | GITLAB_ENDPOINT | https://gitlab.host.com/api/v4 |
 
   Scenario: Validate all milestone issues are closed
     Given I initialize the client

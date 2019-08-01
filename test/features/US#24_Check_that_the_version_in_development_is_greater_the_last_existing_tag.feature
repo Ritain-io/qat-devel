@@ -14,11 +14,12 @@ Feature: US#16 Check that the version in development is greater the last existin
     Given I copy the directory named "../../resources/gem_project_2.0.1" to "project"
     And I cd to "project"
     And I set the environment variables to:
-      | variable        | value        |
-      | CUCUMBER_FORMAT |              |
-      | CUCUMBER_OPTS   |              |
-      | CI_PROJECT_ID   | 255          |
-      | GITLAB_TOKEN    | gitlab_token |
+      | variable        | value                          |
+      | CUCUMBER_FORMAT |                                |
+      | CUCUMBER_OPTS   |                                |
+      | CI_PROJECT_ID   | 255                            |
+      | GITLAB_TOKEN    | gitlab_token                   |
+      | GITLAB_ENDPOINT | https://gitlab.host.com/api/v4 |
 
     When I run `rake qat:devel:gitlab:check_version_tags`
     Then the exit status should be 0
@@ -32,11 +33,12 @@ Feature: US#16 Check that the version in development is greater the last existin
     Given I copy the directory named "../../resources/gem_project_1.5.0" to "project"
     And I cd to "project"
     And I set the environment variables to:
-      | variable        | value        |
-      | CUCUMBER_FORMAT |              |
-      | CUCUMBER_OPTS   |              |
-      | CI_PROJECT_ID   | 255          |
-      | GITLAB_TOKEN    | gitlab_token |
+      | variable        | value                          |
+      | CUCUMBER_FORMAT |                                |
+      | CUCUMBER_OPTS   |                                |
+      | CI_PROJECT_ID   | 255                            |
+      | GITLAB_TOKEN    | gitlab_token                   |
+      | GITLAB_ENDPOINT | https://gitlab.host.com/api/v4 |
 
     When I run `rake qat:devel:gitlab:check_version_tags`
     Then the exit status should be 1
@@ -51,11 +53,12 @@ Feature: US#16 Check that the version in development is greater the last existin
     Given I copy the directory named "../../resources/gem_project_1.5.0" to "project"
     And I cd to "project"
     And I set the environment variables to:
-      | variable        | value        |
-      | CUCUMBER_FORMAT |              |
-      | CUCUMBER_OPTS   |              |
-      | CI_PROJECT_ID   | 255          |
-      | GITLAB_TOKEN    | gitlab_token |
+      | variable        | value                          |
+      | CUCUMBER_FORMAT |                                |
+      | CUCUMBER_OPTS   |                                |
+      | CI_PROJECT_ID   | 255                            |
+      | GITLAB_TOKEN    | gitlab_token                   |
+      | GITLAB_ENDPOINT | https://gitlab.host.com/api/v4 |
 
     When I run `rake qat:devel:gitlab:check_version_tags[1.6.0]`
     Then the exit status should be 0
@@ -70,11 +73,12 @@ Feature: US#16 Check that the version in development is greater the last existin
     Given I copy the directory named "../../resources/gem_project_1.5.0" to "project"
     And I cd to "project"
     And I set the environment variables to:
-      | variable        | value        |
-      | CUCUMBER_FORMAT |              |
-      | CUCUMBER_OPTS   |              |
-      | CI_PROJECT_ID   | 331          |
-      | GITLAB_TOKEN    | gitlab_token |
+      | variable        | value                          |
+      | CUCUMBER_FORMAT |                                |
+      | CUCUMBER_OPTS   |                                |
+      | CI_PROJECT_ID   | 331                            |
+      | GITLAB_TOKEN    | gitlab_token                   |
+      | GITLAB_ENDPOINT | https://gitlab.host.com/api/v4 |
 
     When I run `rake qat:devel:gitlab:check_version_tags`
     Then the exit status should be 1
@@ -89,11 +93,12 @@ Feature: US#16 Check that the version in development is greater the last existin
     Given I copy the directory named "../../resources/gem_project_1.5.0" to "project"
     And I cd to "project"
     And I set the environment variables to:
-      | variable        | value        |
-      | CUCUMBER_FORMAT |              |
-      | CUCUMBER_OPTS   |              |
-      | CI_PROJECT_ID   | 549          |
-      | GITLAB_TOKEN    | gitlab_token |
+      | variable        | value                          |
+      | CUCUMBER_FORMAT |                                |
+      | CUCUMBER_OPTS   |                                |
+      | CI_PROJECT_ID   | 549                            |
+      | GITLAB_TOKEN    | gitlab_token                   |
+      | GITLAB_ENDPOINT | https://gitlab.host.com/api/v4 |
 
     When I run `rake qat:devel:gitlab:check_version_tags`
     Then the exit status should be 0

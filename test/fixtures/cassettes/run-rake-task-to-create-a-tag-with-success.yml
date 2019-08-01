@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://gitlab.readinessit.com/api/v4/projects/255/repository/tags/2.0.0
+    uri: https://gitlab.host.com/api/v4/projects/255/repository/tags/2.0.0
     body:
       encoding: US-ASCII
       string: ''
@@ -51,7 +51,7 @@ http_interactions:
   recorded_at: Wed, 17 Jul 2019 09:30:33 GMT
 - request:
     method: delete
-    uri: https://gitlab.readinessit.com/api/v4/projects/255/repository/tags/2.0.0
+    uri: https://gitlab.host.com/api/v4/projects/255/repository/tags/2.0.0
     body:
       encoding: US-ASCII
       string: ''

@@ -12,15 +12,17 @@ module QAT
 
 
         # New QAT::Devel::GitLab::Client
-        def initialize(token=nil, project_id=nil)
+        def initialize(endpoint = nil, token = nil, project_id = nil)
+          @endpoint = endpoint || ENV['GITLAB_ENDPOINT']
+          raise ArgumentError.new "No definition of mandatory environment variable 'GITLAB_ENDPOINT'" unless @endpoint
+
           @token = token || ENV['GITLAB_TOKEN']
           raise ArgumentError.new "No definition of mandatory environment variable 'GITLAB_TOKEN'" unless @token
 
           @project_id = project_id || ENV['CI_PROJECT_ID']
           raise ArgumentError.new "No definition of mandatory environment variable 'CI_PROJECT_ID'" unless @project_id
 
-          #Change
-          @client     = Gitlab.client endpoint:      'https://gitlab.readinessit.com/api/v4',
+          @client     = Gitlab.client endpoint:      @endpoint,
                                       private_token: @token
           @issues     = {}
           @milestones = {}
@@ -84,7 +86,7 @@ module QAT
         # @param  [String] title The title of new issue.
         # @param  [Hash] options The hash of options.
         # @return [Array] Values of new issue
-        def create_issue(project, title, options={})
+        def create_issue(project, title, options = {})
           client.create_issue(project, title, options)
         end
 
@@ -114,7 +116,7 @@ module QAT
               end
             end
             description =
-              "" "#{description}
+                "" "#{description}
 - #{labels_text} ##{issue.iid} #{issue.title}" ""
           end
           gemspec      = Dir.glob('../*.gemspec').first
@@ -122,13 +124,13 @@ module QAT
           gemspec_spec.name.to_s
 
           description =
-            "" "## #{gemspec_spec.name.to_s} 2.0.0
+              "" "## #{gemspec_spec.name.to_s} 2.0.0
 
 **Milestone** \"%#{milestone}\"
 
 ### Issues solved in this release
 #{description}
-            " ""
+              " ""
 
           create_issue(@project_id, "Release #{milestone}", options = { description: description })
         end
@@ -160,7 +162,7 @@ module QAT
         # @option options [Integer] :page The page number.
         # @option options [Integer] :per_page The number of results per page.
         # @return [Array<Gitlab::ObjectifiedHash>]
-        def get_tags(options={})
+        def get_tags(options = {})
           client.tags(@project_id, options)
         end
 
