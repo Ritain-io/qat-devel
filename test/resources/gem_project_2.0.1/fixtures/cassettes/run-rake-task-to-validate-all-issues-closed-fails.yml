@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://gitlab.host.com/api/v4/projects/255/milestones
+    uri: https://gitlab.readinessit.com/api/v4/projects/255/milestones
     body:
       encoding: US-ASCII
       string: ''
@@ -31,8 +31,8 @@ http_interactions:
       Etag:
       - W/"81adcabc8015cc1d17dbd37188b136d9"
       Link:
-      - <https://gitlab.host.com/api/v4/projects/255/milestones?id=255&page=1&per_page=20&state=all>;
-        rel="first", <https://gitlab.host.com/api/v4/projects/255/milestones?id=255&page=1&per_page=20&state=all>;
+      - <https://gitlab.readinessit.com/api/v4/projects/255/milestones?id=255&page=1&per_page=20&state=all>;
+        rel="first", <https://gitlab.readinessit.com/api/v4/projects/255/milestones?id=255&page=1&per_page=20&state=all>;
         rel="last"
       Vary:
       - Origin
@@ -60,12 +60,12 @@ http_interactions:
       - max-age=31536000
     body:
       encoding: UTF-8
-      string: '[{"id":1597,"iid":2,"project_id":255,"title":"2.0.1","description":"","state":"active","created_at":"2017-07-12T15:51:32.807Z","updated_at":"2017-07-12T15:51:32.807Z","due_date":null,"start_date":null,"web_url":"https://gitlab.host.com:8083/pbu/qa-toolkit/test-target/milestones/2"},{"id":1589,"iid":1,"project_id":255,"title":"2.0.0","description":"","state":"active","created_at":"2017-07-11T08:35:49.560Z","updated_at":"2017-07-12T15:41:25.895Z","due_date":null,"start_date":null,"web_url":"https://gitlab.host.com:8083/pbu/qa-toolkit/test-target/milestones/1"}]'
+      string: '[{"id":1597,"iid":2,"project_id":255,"title":"2.0.1","description":"","state":"active","created_at":"2017-07-12T15:51:32.807Z","updated_at":"2017-07-12T15:51:32.807Z","due_date":null,"start_date":null,"web_url":"https://gitlab.readinessit.com:8083/pbu/qa-toolkit/test-target/milestones/2"},{"id":1589,"iid":1,"project_id":255,"title":"2.0.0","description":"","state":"active","created_at":"2017-07-11T08:35:49.560Z","updated_at":"2017-07-12T15:41:25.895Z","due_date":null,"start_date":null,"web_url":"https://gitlab.readinessit.com:8083/pbu/qa-toolkit/test-target/milestones/1"}]'
     http_version: 
   recorded_at: Fri, 12 Jul 2019 12:56:39 GMT
 - request:
     method: get
-    uri: https://gitlab.host.com/api/v4/projects/255/milestones/1597/issues
+    uri: https://gitlab.readinessit.com/api/v4/projects/255/milestones/1597/issues
     body:
       encoding: US-ASCII
       string: ''
@@ -94,8 +94,8 @@ http_interactions:
       Etag:
       - W/"154b72a76c2c8e21b5196cff5cbd08ff"
       Link:
-      - <https://gitlab.host.com/api/v4/projects/255/milestones/1597/issues?id=255&milestone_id=1597&page=1&per_page=20>;
-        rel="first", <https://gitlab.host.com/api/v4/projects/255/milestones/1597/issues?id=255&milestone_id=1597&page=1&per_page=20>;
+      - <https://gitlab.readinessit.com/api/v4/projects/255/milestones/1597/issues?id=255&milestone_id=1597&page=1&per_page=20>;
+        rel="first", <https://gitlab.readinessit.com/api/v4/projects/255/milestones/1597/issues?id=255&milestone_id=1597&page=1&per_page=20>;
         rel="last"
       Vary:
       - Origin
@@ -123,7 +123,7 @@ http_interactions:
       - max-age=31536000
     body:
       encoding: UTF-8
-      string: '[{"id":6079,"iid":3,"project_id":255,"title":"Issue 03","description":"","state":"opened","created_at":"2017-07-12T15:51:46.220Z","updated_at":"2017-07-12T15:51:46.220Z","closed_at":null,"closed_by":null,"labels":[],"milestone":{"id":1597,"iid":2,"project_id":255,"title":"2.0.1","description":"","state":"active","created_at":"2017-07-12T15:51:32.807Z","updated_at":"2017-07-12T15:51:32.807Z","due_date":null,"start_date":null,"web_url":"https://gitlab.host.com:8083/pbu/qa-toolkit/test-target/milestones/2"},"assignees":[],"author":{"id":159,"name":"author_name","username":"username","state":"active","avatar_url":"https://gitlab.host.com:8083/uploads/-/system/user/avatar/159/avatar.png","web_url":"https://gitlab.host.com:8083/username"},"assignee":null,"user_notes_count":0,"upvotes":0,"downvotes":0,"due_date":null,"confidential":false,"discussion_locked":null,"web_url":"https://gitlab.host.com:8083/pbu/qa-toolkit/test-target/issues/3","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null}}]'
+      string: '[{"id":6079,"iid":3,"project_id":255,"title":"Issue 03","description":"","state":"opened","created_at":"2017-07-12T15:51:46.220Z","updated_at":"2017-07-12T15:51:46.220Z","closed_at":null,"closed_by":null,"labels":[],"milestone":{"id":1597,"iid":2,"project_id":255,"title":"2.0.1","description":"","state":"active","created_at":"2017-07-12T15:51:32.807Z","updated_at":"2017-07-12T15:51:32.807Z","due_date":null,"start_date":null,"web_url":"https://gitlab.readinessit.com:8083/pbu/qa-toolkit/test-target/milestones/2"},"assignees":[],"author":{"id":159,"name":"author_name","username":"username","state":"active","avatar_url":"https://gitlab.readinessit.com:8083/uploads/-/system/user/avatar/159/avatar.png","web_url":"https://gitlab.readinessit.com:8083/username"},"assignee":null,"user_notes_count":0,"upvotes":0,"downvotes":0,"due_date":null,"confidential":false,"discussion_locked":null,"web_url":"https://gitlab.readinessit.com:8083/pbu/qa-toolkit/test-target/issues/3","time_stats":{"time_estimate":0,"total_time_spent":0,"human_time_estimate":null,"human_total_time_spent":null}}]'
     http_version: 
   recorded_at: Fri, 12 Jul 2019 12:56:39 GMT
 recorded_with: VCR 5.0.0

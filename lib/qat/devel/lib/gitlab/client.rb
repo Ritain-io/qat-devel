@@ -20,7 +20,7 @@ module QAT
           raise ArgumentError.new "No definition of mandatory environment variable 'CI_PROJECT_ID'" unless @project_id
 
           #Change
-          @client     = Gitlab.client endpoint:      'https://gitlab.host.com/api/v4',
+          @client     = Gitlab.client endpoint:      'https://gitlab.readinessit.com/api/v4',
                                       private_token: @token
           @issues     = {}
           @milestones = {}
