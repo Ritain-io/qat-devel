@@ -27,7 +27,7 @@ end
 
 And(/^a tag "([^"]*)" should exist$/) do |version|
   @tag_name    = version
-  @created_tag = QAT::Devel::GitLab::Client.new(nil, 255).client.tag(255, @tag_name)
+  @created_tag = QAT::Devel::GitLab::Client.new(nil, nil, 255).client.tag(255, @tag_name)
 
   puts "\nTAG Created:\n#{@created_tag.to_h}\n"
 

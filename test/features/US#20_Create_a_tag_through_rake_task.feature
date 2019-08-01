@@ -3,11 +3,12 @@ Feature: Create a tag through rake task execution
 
   Background:
     Given environment variables:
-      | variable        | value        |
-      | CUCUMBER_FORMAT |              |
-      | CUCUMBER_OPTS   |              |
-      | CI_PROJECT_ID   | 255          |
-      | GITLAB_TOKEN    | gitlab_token |
+      | variable        | value                          |
+      | CUCUMBER_FORMAT |                                |
+      | CUCUMBER_OPTS   |                                |
+      | CI_PROJECT_ID   | 255                            |
+      | GITLAB_TOKEN    | gitlab_token                   |
+      | GITLAB_ENDPOINT | https://gitlab.host.com/api/v4 |
 
   @tag_creation
   Scenario: Run rake task to create a tag with success

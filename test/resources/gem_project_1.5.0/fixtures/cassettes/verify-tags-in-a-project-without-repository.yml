@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://gitlab.readinessit.com/api/v4/projects/331/repository/tags
+    uri: https://gitlab.host.com/api/v4/projects/331/repository/tags
     body:
       encoding: US-ASCII
       string: ''

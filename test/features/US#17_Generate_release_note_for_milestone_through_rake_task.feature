@@ -9,11 +9,12 @@ Feature: Validates issues status through rake task execution
     Given I copy the directory named "../../resources/gem_project_2.0.0" to "project"
     And I cd to "project"
     And I set the environment variables to:
-      | variable        | value        |
-      | CUCUMBER_FORMAT |              |
-      | CUCUMBER_OPTS   |              |
-      | CI_PROJECT_ID   | 255          |
-      | GITLAB_TOKEN    | gitlab_token |
+      | variable        | value                          |
+      | CUCUMBER_FORMAT |                                |
+      | CUCUMBER_OPTS   |                                |
+      | CI_PROJECT_ID   | 255                            |
+      | GITLAB_TOKEN    | gitlab_token                   |
+      | GITLAB_ENDPOINT | https://gitlab.host.com/api/v4 |
 
     When I run `rake qat:devel:gitlab:milestone_release_note`
     Then the exit status should be 0
