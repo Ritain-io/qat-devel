@@ -100,7 +100,7 @@ qat:devel:tests:run
 
 # Documentation
 
-- [API documentation](https://readiness-it.github.io/qat-devel/doc/index.html)
+- [API documentation](https://readiness-it.github.io/qat-devel/)
 
 
 ## Development
