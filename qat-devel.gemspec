@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |gem|
   gem.name        = 'qat-devel'
-  gem.version     = '8.0.1'
+  gem.version     = '8.0.3'
   gem.summary     = %q{Support gem for QAT development.}
   gem.description = <<-DESC
   QAT Devel is a tool for executing common tasks in the development of QAT modules:
@@ -34,7 +34,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'cucumber', '~> 5.2.0'
   gem.add_dependency 'rake', '~> 13.0.1'
   gem.add_dependency 'yard', '~> 0.9.9', '>= 0.9.9'
-  #fix issue for this gem
   gem.add_dependency 'kramdown', '~> 1.8'
   gem.add_dependency 'rubycritic', '~> 3.1'
   gem.add_dependency 'simplecov', '~> 0.10'
