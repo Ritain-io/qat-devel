@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.26
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><p><a href="https://travis-ci.com/readiness-it/qat-devel"><img src="https://travis-ci.com/readiness-it/qat-devel.svg?branch=master" alt="Build Status" /></a></p>
+
+<h1 id="qatdevel">QAT::Devel</h1>
+
+<ul>
+  <li>Welcome to the QAT Devel gem!</li>
+  <li>This gem provides interaction with Gitlab api and DoD metrics.</li>
+</ul>
+
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+  <li>This gem have functionalities such as:
+    <ul>
+      <li>Get all gitlab milestone issues;</li>
+      <li>Validate gitlab issues status;</li>
+      <li>Generate release note for gitlab milestone;</li>
+      <li>Create a gitlab milestone tag;</li>
+      <li>Check that the version in development is greater than the last existing tag;</li>
+      <li>DoD code documentation metric;</li>
+      <li>DoD code static analysis metric;</li>
+      <li>Run all the tests.</li>
+    </ul>
+  </li>
+  <li>In order to execute all the above, <code>qat:devel</code> requires dependency automatically from other gems: 
+<code>
+'cucumber'
+'rake'
+'yard'
+'kramdown'
+'rubycritic'
+'simplecov'
+'simplecov-json'
+'simplecov-rcov'
+'minitest'
+'aruba'
+'retriable'
+'nokogiri'
+'nexus'
+'gitlab'
+</code></li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add this line to your application’s Gemfile:</p>
+
+<p><code>ruby
+gem 'qat-devel'
+</code></p>
+
+<p>And then execute:</p>
+
+<pre class="code ruby"><code class="ruby">$ bundle install
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre class="code ruby"><code class="ruby">$ gem install qat-devel
+</code></pre>
+
+<h1 id="usage">Usage</h1>
+<p><code>ruby
+require 'qat/devel/tasks'
+</code></p>
+
+<h2 id="get-all-gitlab-milestone-issues">Get all gitlab milestone issues:</h2>
+<p>In order to get all milestone issues in gitlab it is necessary to initialize the client and then call the associated method:
+<code>ruby
+gitlab_client = QAT::Devel::GitLab::Client.new(gitlab_endpoint, gitlab_token, project_id)
+gitlab_client.get_milestone_id(milestone_title)
+</code></p>
+
+<h2 id="validate-gitlab-issues-status">Validate gitlab issues status:</h2>
+<p>In order to validate the issues status it is necessary to run the following rake task:
+<code>ruby
+qat:devel:gitlab:milestone_issues_closed
+</code> 
+##Generate release note for gitlab milestone:
+In order to generate release note for milestone it is necessary to run the following rake task:
+<code>ruby
+qat:devel:gitlab:milestone_release_note
+</code>
+##Create a gitlab milestone tag:
+In order to create a milestone tag it is necessary to run the following rake task:
+<code>ruby
+qat:devel:gitlab:milestone_tag
+</code>
+##Check that the version in development is greater than the last existing tag:
+In order to check that the version in development is greater than the last existing tag it is necessary to run the following rake task:
+<code>ruby
+qat:devel:gitlab:check_version_tags
+</code>
+##DoD code documentation metric:
+In order to DoD(Definition of Done) code documentation metric it is necessary to run the following rake task:
+<code>ruby
+qat:devel:validate_yard_doc[project]
+</code>
+##DoD code static analysis metric:
+In order to DoD(Definition of Done) code static analysis metric it is necessary to run the following rake task:
+<code>ruby
+qat:devel:static_analysis:validation['filter']
+</code>
+##Run all the tests:
+In order to run all the cucumber tests it is necessary to run the following rake task:
+<code>ruby
+qat:devel:tests:run
+</code></p>
+
+<h1 id="documentation">Documentation</h1>
+
+<ul>
+  <li><a href="https://readiness-it.github.io/qat-devel/">API documentation</a></li>
+</ul>
+
+<h2 id="development">Development</h2>
+
+<p>After checking out the repo, run <code>bin/setup</code> to install dependencies. Then, run <code>rake spec</code> to run the tests. You can also run <code>bin/console</code> for an interactive prompt that will allow you to experiment.</p>
+
+<p>To install this gem onto your local machine, run <code>bundle exec rake install</code>. To release a new version, update the version number in <code>version.rb</code>, and then run <code>bundle exec rake release</code>, which will create a git tag for the version, push git commits and tags, and push the <code>.gem</code> file to <a href="https://rubygems.org">rubygems.org</a>.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Bug reports and pull requests are welcome on GitHub at https://github.com/readiness-it/qat-devel. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="http://contributor-covenant.org">Contributor Covenant</a> code of conduct.</p>
+
+<h2 id="code-of-conduct">Code of Conduct</h2>
+
+<p>Everyone interacting in the QAT::Devel project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the <a href="https://github.com/qa-toolkit/qat-devel/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Thu Jul  1 15:45:46 2021 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.26 (ruby-2.5.8).
+</div>
+
+    </div>
+  </body>
+</html>
