@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/readiness-it/qat-devel.svg?branch=master)](https://travis-ci.org/readiness-it/qat-devel)
+[![Build Status](https://travis-ci.com/readiness-it/qat-devel.svg?branch=master)](https://travis-ci.com/readiness-it/qat-devel)
 
 # QAT::Devel
 
