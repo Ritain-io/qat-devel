@@ -22,14 +22,14 @@ After '@tag_creation' do
   ENV['CI_PROJECT_ID'] = old_id
 end
 
-AfterConfiguration do
-  VCR.configure do |config|
-    config.cassette_library_dir = File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'cassettes')
-    config.hook_into :webmock
-    #config.default_cassette_options = {allow_unused_http_interactions: false, decode_compressed_response: true, record: :none}
-    config.default_cassette_options = {decode_compressed_response: true, record: :new_episodes}
-  end
-end
+# AfterConfiguration do
+#   VCR.configure do |config|
+#     config.cassette_library_dir = File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'cassettes')
+#     config.hook_into :webmock
+#     #config.default_cassette_options = {allow_unused_http_interactions: false, decode_compressed_response: true, record: :none}
+#     config.default_cassette_options = {decode_compressed_response: true, record: :new_episodes}
+#   end
+# end
 
 at_exit do
   VCR.eject_cassette&.tap do |cassette|

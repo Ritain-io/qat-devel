@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |gem|
   gem.name        = 'qat-devel'
-  gem.version     = '8.0.3'
+  gem.version     = '8.0.4'
   gem.summary     = %q{Support gem for QAT development.}
   gem.description = <<-DESC
   QAT Devel is a tool for executing common tasks in the development of QAT modules:
@@ -26,12 +26,12 @@ Gem::Specification.new do |gem|
   extra_files = %w[LICENSE]
   gem.files   = Dir.glob('{lib}/**/*') + extra_files
 
-  gem.required_ruby_version = '~> 2.0'
+  gem.required_ruby_version = '~> 3.1'
 
   # GEM dependencies
   gem.add_dependency 'activesupport', '~> 5.0'
   gem.add_dependency 'contracts', '~> 0.16.0'
-  gem.add_dependency 'cucumber', '~> 5.2.0'
+  gem.add_dependency 'cucumber'
   gem.add_dependency 'rake', '~> 13.0.1'
   gem.add_dependency 'yard', '~> 0.9.9', '>= 0.9.9'
   gem.add_dependency 'kramdown', '~> 1.8'
@@ -40,7 +40,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'simplecov-json', '~> 0.2'
   gem.add_dependency 'simplecov-rcov', '~> 0.2'
   gem.add_dependency 'minitest', '~> 5.10'
-  gem.add_dependency 'aruba', '~> 0.14', '>= 0.14.2'
+  gem.add_dependency 'aruba'
   gem.add_dependency 'retriable'
   gem.add_dependency 'nokogiri', '~> 1.7'
   gem.add_dependency 'nexus', '~> 1.3'

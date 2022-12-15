@@ -4,6 +4,6 @@ module QAT
   #@since 6.0.0
   module Devel
     # Represents QAT Devel version
-    VERSION = '8.0.3'
+    VERSION = '8.0.4'
   end
 end
