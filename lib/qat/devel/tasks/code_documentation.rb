@@ -21,6 +21,7 @@ namespace :qat do
       ].join(' ')
       cmd     = "yard doc #{options}"
 
+			
       stdout_str, _stderr_str, status = Open3.capture3(cmd)
       exit_code                       = status.to_s.match(/exit\s(\d+)/).captures.first.to_i
       fail 'Generating docs failed' unless exit_code == 0
