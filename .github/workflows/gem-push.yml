@@ -23,6 +23,6 @@ jobs:
 
       - name: Publish to RubyGems
         run: |
-          gem yank qat-devel 8.0.3 --key $RUBYGEMS_API_KEY --host rubygems.org
+          gem yank qat-devel -v 8.0.3 --key $RUBYGEMS_API_KEY
         env:
           GEM_HOST_API_KEY: "${{secrets.RUBYGEMS_AUTH_TOKEN}}"
