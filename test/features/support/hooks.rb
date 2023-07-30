@@ -22,7 +22,7 @@ After '@tag_creation' do
   ENV['CI_PROJECT_ID'] = old_id
 end
 
-AfterConfiguration do
+BeforeAll do
   VCR.configure do |config|
     config.cassette_library_dir = File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'cassettes')
     config.hook_into :webmock
