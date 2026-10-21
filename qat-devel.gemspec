@@ -32,7 +32,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'activesupport', '~> 7.0'
   gem.add_dependency 'aruba', '~> 2.1'
   gem.add_dependency 'contracts', '~> 0.17.0'
-  gem.add_dependency 'cucumber', '~> 9.0'
+  gem.add_dependency 'cucumber', '~> 10.0'
   gem.add_dependency 'gitlab', '~> 4.19.0'
   gem.add_dependency 'kramdown', '~> 2.4'
   gem.add_dependency 'minitest', '~> 5.10'
