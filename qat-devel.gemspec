@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   DESC
   #Change
   gem.email    = 'qatoolkit@readinessit.com'
-  gem.homepage = 'https://www.ritain.io'
+  gem.homepage    = 'https://conkord.com/'
 
   gem.metadata    = {
       'source_code_uri'   => 'https://github.com/Ritain-io/qat-devel'
